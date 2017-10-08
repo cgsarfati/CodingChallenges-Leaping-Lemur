@@ -24,11 +24,18 @@ It cannot use deadly branch (1 in the list).
 """
 
 
-def  lemur(branches):
+def lemur(branches):
     """Return number of jumps needed."""
 
     assert branches[0] == 0, "First branch must be alive"
     assert branches[-1] == 0, "Last branch must be alive"
+
+    # 0 = alive, 1 = dead
+    # 1st and last always alive
+    # jumping to end always possible
+    # default - make lemur jump 2; if lands on dead, jump 1
+    # counter for each iteration (2x/1x = 1 jump); return at end
+    # need to know value two items ahead for each iteration
 
 if __name__ == '__main__':
     import doctest
